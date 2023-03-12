@@ -1,0 +1,32 @@
+caracteres de escape /n /t etc
+
+para esxpresoiones regulares se usan raw string
+
+donde coloco Text(r'hola/nmundo') y al poner r no realiza la funcion de /n 
+si no que incluye el /n en la salida del texto 
+
+regexr.com es para crear expresiones regulares 
+
+final regExp = RegExp(r'([A-Z])\w+'); esto comprueba que una palabra empiece con mayuscula da igual la posicion 
+en la que este
+     
+print(regExp.hasMatch('hola')) esto da false 
+
+print(regExp.hasMatch('Hola')) esto da verdadero
+
+CON ESTO DIGO QUE LA PRIMERA PALABRA EMPIECE CON MAYUSCULA
+final regExp = RegExp(r'＾([A-Z])\w+');      
+
+
+regexr.com EN LA PARTE DE COMUNITY PATTERNS PUEDO BUSCAR EXPRESIONES YA REALIZADAS 
+
+
+PARA PASSWORD incluye una mayuscula un digito y al menos 8 caracteres
+final regExp = RegExp(r'^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$');
+print(regExp.hasMatch('Holachao123')) true
+
+
+
+PARA CORREOS EN ESTE CASO NEECESITAMOS COMMILLAS DOBLES
+final regExp = RegExp(r"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+print(regExp.hasMatch('test@test.com')) true
