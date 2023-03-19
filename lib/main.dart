@@ -43,6 +43,25 @@ class MyApp extends StatelessWidget {
             Colors.pinkAccent,
           ),
         ),
+        // ESTILOS PARA SWITCH
+        switchTheme: const SwitchThemeData(
+          thumbColor: MaterialStatePropertyAll(
+            Colors.amber,
+          ),
+        ),
+        // ESTILOS PARA SLIDER
+        sliderTheme: SliderThemeData(
+          trackHeight: 15,
+          activeTrackColor: Colors.pinkAccent,
+          thumbColor: Colors.pinkAccent,
+          overlayColor: Colors.pinkAccent.withOpacity(0.2),
+          valueIndicatorColor: Colors.redAccent,
+          inactiveTrackColor: Colors.pinkAccent.withOpacity(0.3),
+          inactiveTickMarkColor: Colors.white54,
+          thumbShape: RoundSliderThumbShape(
+            enabledThumbRadius: 15,
+          ),
+        ),
       ),
       home: const HomePage(),
     );

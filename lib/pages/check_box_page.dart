@@ -63,6 +63,20 @@ class _CheckBoxPageState extends State<CheckBoxPage> {
                 ),
                 value: _checked,
               ),
+              Divider(),
+              SwitchListTile(
+                inactiveTrackColor: Colors.blueGrey.shade100,
+                title: const Text('push notifications'),
+                value: _checked,
+                onChanged: (value) {
+                  print('valor de value $value');
+
+                  setState(() {
+                    _checked = value;
+                  });
+                },
+              ),
+              Divider(),
               MaterialButton(
                 // si mi checbox es true se activa si no se desactiva
                 onPressed: _checked ? () {} : null,
