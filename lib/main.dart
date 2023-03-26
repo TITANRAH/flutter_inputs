@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:inputs/app_routes.dart';
+import 'package:inputs/pages/context/home_page.dart';
+import 'package:inputs/routes.dart';
 import 'package:inputs/utils/material_color_generator.dart';
 
 void main() {
@@ -63,7 +65,11 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const HomePage(),
+      // home: const SizedBox(
+      //   width: 400,
+      //   child: HomePageContext(),
+      // ),
+      home: HomePage(),
     );
   }
 }
