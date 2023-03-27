@@ -5,6 +5,7 @@ import 'package:inputs/pages/check_box_page.dart';
 import 'package:inputs/pages/context/contador_prueba_context.dart';
 import 'package:inputs/pages/context/home_page.dart';
 import 'package:inputs/pages/context/splash_page.dart';
+import 'package:inputs/pages/inherited_widget_SECCION11/home_counter_inherited.dart';
 import 'package:inputs/pages/keyboard_types_page.dart';
 import 'package:inputs/pages/keys_pages/animated_text.dart';
 import 'package:inputs/pages/keys_pages/list_keys_page.dart';
@@ -38,5 +39,8 @@ Map<String, Widget Function(BuildContext)> get appRoutes {
     Routes.productPage: (_) => const ProductPageContext(),
     Routes.splashPage: (_) => const SplashPageContext(),
     Routes.counterPage: (_) => const CounterPageContext(),
+
+    //inherited widget
+    Routes.homeInheritedWidget: (_) => const HomeInheritedPage(),
   };
 }

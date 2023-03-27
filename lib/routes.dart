@@ -21,4 +21,8 @@ class Routes {
   static const productPage = '/product_page(CONTEXT 2)';
   static const splashPage = '/splash_page(CONTEXT 3)';
   static const counterPage = '/counter_page(CONTEXT 4)';
+
+  // inherited widget seccion 11
+
+    static const homeInheritedWidget = '/inherited-widget(INHERITED WIDGET SECCION 11)';
 }
