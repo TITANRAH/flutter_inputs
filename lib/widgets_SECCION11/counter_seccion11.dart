@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:inputs/pages/inherited_widget_SECCION11/home_counter_inherited.dart';
+import 'package:inputs/state_managment/consumer.dart';
 // import 'package:inputs/pages/inherited_widget_SECCION11/home_counter_inherited.dart';
 import 'package:inputs/widgets_SECCION11/animated_text.dart';
 
@@ -22,18 +23,19 @@ class CounterSeccion11 extends StatelessWidget {
 
     // solo puedo utilizar este metodo con clases que extiendan de inheritedwidget en este caso
     // myhomeprovider creado en home_counter_inherited.dart es de este tipo
-    final homeProvider = MyHomePageCounterProvider.of(context);
+    // final homeProvider = MyHomePageCounterProvider.of(context);
 
-    return Container(
-      width: 100,
-      height: 100,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: homeProvider.color,
-      ),
-      child: const Center(
-        child: AnimatedText(),
-      ),
-    );
+    return Consumer<MyHomePageController>(
+        builder: (_, controller) => Container(
+              width: 100,
+              height: 100,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: controller.color,
+              ),
+              child: const Center(
+                child: AnimatedText(),
+              ),
+            ));
   }
 }
